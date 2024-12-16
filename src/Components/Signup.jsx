@@ -100,15 +100,15 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex flex-row items-center justify-center min-w-96 ">
-      <div className="h-full p-6 w-full bg-gray-700 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 transition-all ease-linear hover:shadow-lg duration-400 hover:shadow-slate-950">
-        <h3 className="font-serif font-bold text-center text-gray-300 ">
+    <div className="flex flex-row items-center justify-center min-h-dvh px-2">
+      <div className="p-4 w-full max-w-xs sm:min-w-[400px] sm:px-6 md:min-w-[450px] md:px-8 lg:max-w-xl bg-gray-700 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 transition-all ease-linear hover:shadow-lg duration-400 hover:shadow-slate-950">
+        <h3 className="font-serif font-bold text-center text-xl md:text-2xl lg:text-2x text-gray-300 ">
           Signup
         </h3>
         <form onSubmit={handleSignup}>
           <div>
             <label className="label p-2 cursor-pointer">
-              <span className="text-base label-text text-gray-300">
+              <span className="text-sm md:text-base label-text text-gray-300">
                 Username
               </span>
             </label>
@@ -117,28 +117,30 @@ const Signup = () => {
               name="username"
               value={formData.username}
               placeholder="Enter username"
-              className="w-full input input-bordered h-10"
+              className="w-full input input-bordered h-10 text-sm md:text-base"
               onChange={handleInputChange}
             />
           </div>
 
           <div>
             <label className="label p-2 cursor-pointer">
-              <span className="text-base label-text text-gray-300">Email</span>
+              <span className="text-sm md:text-base label-text text-gray-300">
+                Email
+              </span>
             </label>
             <input
               name="email"
               value={formData.email}
               type="text"
               placeholder="Enter email"
-              className="w-full input input-bordered h-10"
+              className="w-full input input-bordered h-10 text-sm md:text-base"
               onChange={handleInputChange}
             />
           </div>
 
           <div>
             <label className="label flex p-2 cursor-pointer">
-              <span className="text-base label-text text-gray-300">
+              <span className="text-sm md:text-base label-text text-gray-300">
                 Password
               </span>
             </label>
@@ -147,12 +149,12 @@ const Signup = () => {
               name="password"
               value={formData.password}
               placeholder="Enter Password"
-              className="w-full input input-bordered h-10"
+              className="w-full input input-bordered h-10 text-sm md:text-base"
               onChange={handleInputChange}
             />
 
             {!passwordValid && (
-              <div className=" flex justify-center  text-center  text-xs  font-semibold text-red-400">
+              <div className=" flex justify-center  text-center mt-0.5  text-[11px]  font-semibold text-red-400">
                 6-15 letters, 1 uppercase, 1 digit, 1 special character !
               </div>
             )}
@@ -160,7 +162,7 @@ const Signup = () => {
 
           <div>
             <label className="label p-2 cursor-pointer">
-              <span className="text-base label-text text-gray-300">
+              <span className="text-sm md:text-base label-text text-gray-300">
                 Confirm Password
               </span>
             </label>
@@ -169,7 +171,7 @@ const Signup = () => {
               name="confirmpassword"
               value={formData.confirmpassword}
               placeholder="Enter Password"
-              className="w-full input input-bordered h-10"
+              className="w-full input input-bordered h-10 text-sm md:text-base"
               onChange={handleInputChange}
             />
           </div>
@@ -177,7 +179,9 @@ const Signup = () => {
           <div>
             <label className="label p-2 cursor-pointer">
               <div className="flex flex-row justify-center items-center ">
-                <div className="text-base label-text mr-20">Captcha</div>
+                <div className="text-base label-text text-center mr-[70px] sm:mr-28">
+                  Captcha
+                </div>
                 <div className="font-serif font-semibold p-1 rounded-l border-gray-800">
                   {generatedCaptcha}
                 </div>
@@ -186,7 +190,7 @@ const Signup = () => {
             <div className="flex flex-row justify-center gap-x-2 items-center">
               <button
                 onClick={refreshCaptcha}
-                className="border-2 border-gray-500 text-gray-400 rounded-md h-10 px-3 leading-none focus:outline-none hover:text-black hover:bg-gray-400 transition-all duration-150 ease-linear"
+                className="border-2 text-sm md:text-base border-gray-500 text-gray-400 rounded-md h-10 px-3 leading-none focus:outline-none hover:text-black hover:bg-gray-400 transition-all duration-150 ease-linear"
               >
                 Refresh
               </button>
@@ -195,7 +199,7 @@ const Signup = () => {
                 name="captcha"
                 value={formData.captcha}
                 placeholder="Enter captcha"
-                className="w-full input input-bordered h-10"
+                className="w-full input input-bordered h-10 text-sm md:text-base"
                 onChange={handleInputChange}
               />
             </div>

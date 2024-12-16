@@ -6,7 +6,7 @@ import { ToastContainer } from "react-toastify";
 
 const App = () => {
   return (
-    <div className=" p-5 h-screen flex items-center justify-center">
+    <div className=" p-5 h-dvh flex items-center justify-center">
       <ToastContainer />
       <Routes>
         <Route path="/" element={<Login />} />

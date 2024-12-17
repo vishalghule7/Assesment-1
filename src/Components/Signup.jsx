@@ -154,7 +154,7 @@ const Signup = () => {
             />
 
             {!passwordValid && (
-              <div className=" flex justify-center  text-center mt-0.5  text-[11px]  font-semibold text-red-400">
+              <div className=" flex justify-center  text-center mt-0.5  text-[11px] sm:text-sm  font-semibold text-red-400">
                 6-15 letters, 1 uppercase, 1 digit, 1 special character !
               </div>
             )}

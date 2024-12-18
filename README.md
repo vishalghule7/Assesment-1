@@ -1,4 +1,5 @@
-# React + Vite
+# React + Vite + Tailwind Css
+
 
 ```
 Git clone the repo
